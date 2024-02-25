@@ -1,0 +1,13 @@
+# Random stuff
+__pycache__
+
+# Environment stuff
+.venv
+.env
+
+# Terraform
+.terraform
+.terraform.lock.hcl
+.terraform.tfstate.lock.info
+terraform.tfstate
+terraform.tfvars
