@@ -1,0 +1,3 @@
+aws_region = ""
+aws_profile = ""
+snowpipe_sqs_arn = ""
