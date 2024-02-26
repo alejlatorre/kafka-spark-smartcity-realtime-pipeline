@@ -1,6 +1,4 @@
-# black==24.2.0
 confluent-kafka==2.3.0
 pyspark==3.5.0
 python-dotenv==1.0.1
-# ruff==0.2.2
 simplejson==3.19.2
