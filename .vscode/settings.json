@@ -20,5 +20,8 @@
   "[terraform]": {
     "editor.defaultFormatter": "hashicorp.terraform",
     "editor.formatOnSave": true
+  },
+  "[dockerfile]": {
+    "editor.formatOnSave": true
   }
 }
