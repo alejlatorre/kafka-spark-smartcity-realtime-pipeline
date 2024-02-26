@@ -1,11 +1,9 @@
 version: '3'
 
 x-spark-common: &spark-common
-  image: bitnami/spark:latest
+  image: poc/smartcity-kafka-spark:latest
   volumes:
     - ./jobs:/opt/bitnami/spark/jobs
-    - ./.env:/opt/bitnami/spark/.env
-    - ./requirements.txt:/opt/bitnami/spark/requirements.txt
   command: bin/spark-class org.apache.spark.deploy.worker.Worker spark://spark-master:7077
   depends_on:
     - spark-master
@@ -72,11 +70,9 @@ services:
     networks:
       - datamasterylab
   spark-master:
-    image: bitnami/spark:latest
+    image: poc/smartcity-kafka-spark:latest
     volumes:
       - ./jobs:/opt/bitnami/spark/jobs
-      - ./.env:/opt/bitnami/spark/.env
-      - ./requirements.txt:/opt/bitnami/spark/requirements.txt
     command: bin/spark-class org.apache.spark.deploy.master.Master
     ports:
       - "9090:8080" # Internal and external
