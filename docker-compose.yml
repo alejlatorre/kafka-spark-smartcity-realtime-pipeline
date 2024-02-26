@@ -4,6 +4,7 @@ x-spark-common: &spark-common
   image: poc/smartcity-kafka-spark:latest
   volumes:
     - ./jobs:/opt/bitnami/spark/jobs
+    - ./.env:/opt/bitnami/spark/.env
   command: bin/spark-class org.apache.spark.deploy.worker.Worker spark://spark-master:7077
   depends_on:
     - spark-master
@@ -73,6 +74,7 @@ services:
     image: poc/smartcity-kafka-spark:latest
     volumes:
       - ./jobs:/opt/bitnami/spark/jobs
+      - ./.env:/opt/bitnami/spark/.env
     command: bin/spark-class org.apache.spark.deploy.master.Master
     ports:
       - "9090:8080" # Internal and external
